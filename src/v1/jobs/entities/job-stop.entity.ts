@@ -1,9 +1,12 @@
+import { Entity, PrimaryGeneratedColumn, ManyToOne, Column } from 'typeorm';
+import { Job } from './job.entity';
+
 @Entity('job_stops')
 export class JobStop {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @ManyToOne(() => Job, job => job.stops)
+  @ManyToOne(() => Job, (job) => job.stops)
   job: Job;
 
   @Column()

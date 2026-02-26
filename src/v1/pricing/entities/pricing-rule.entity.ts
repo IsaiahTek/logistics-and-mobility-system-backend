@@ -1,3 +1,5 @@
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+
 @Entity('pricing_rules')
 export class PricingRule {
   @PrimaryGeneratedColumn('uuid')

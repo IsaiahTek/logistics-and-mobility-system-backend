@@ -9,7 +9,16 @@ import { BusinessesModule } from './businesses/businesses.module';
 import { TrackingModule } from './tracking/tracking.module';
 
 @Module({
-  imports: [UsersModule, DriversModule, VehiclesModule, JobsModule, DispatchModule, PricingModule, BusinessesModule, TrackingModule],
+  imports: [
+    UsersModule,
+    DriversModule,
+    VehiclesModule,
+    JobsModule,
+    DispatchModule,
+    PricingModule,
+    BusinessesModule,
+    TrackingModule,
+  ],
   controllers: [],
   providers: [],
   exports: [],

@@ -1,3 +1,12 @@
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  JoinColumn,
+  Column,
+} from 'typeorm';
+import { Job } from './job.entity';
+
 @Entity('job_payloads')
 export class JobPayload {
   @PrimaryGeneratedColumn('uuid')

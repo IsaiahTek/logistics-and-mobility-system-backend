@@ -1,3 +1,6 @@
+import { User } from 'src/v1/users/entities/user.entity';
+import { Entity, PrimaryGeneratedColumn, ManyToOne, Column } from 'typeorm';
+
 @Entity('drivers')
 export class Driver {
   @PrimaryGeneratedColumn('uuid')

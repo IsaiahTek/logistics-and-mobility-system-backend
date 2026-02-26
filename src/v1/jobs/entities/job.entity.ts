@@ -1,3 +1,13 @@
+import { User } from 'src/v1/users/entities/user.entity';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  OneToMany,
+} from 'typeorm';
+import { JobStop } from './job-stop.entity';
+
 export enum JobType {
   RIDE = 'ride',
   CARPOOL = 'carpool',
@@ -35,6 +45,6 @@ export class Job {
   @Column({ type: 'decimal', nullable: true })
   finalPrice: number;
 
-  @OneToMany(() => JobStop, stop => stop.job)
+  @OneToMany(() => JobStop, (stop) => stop.job)
   stops: JobStop[];
 }
